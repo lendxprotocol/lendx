@@ -1,0 +1,332 @@
+.App {
+  text-align: center;
+  background-color: #f1f5f9;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #303030;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 15px 15px 15px 15px;
+}
+
+.App-header-item{
+  display: flex;
+  align-items: start;
+}
+
+.App-header-content {
+  margin: 30px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  height: 100px;
+}
+
+.App-link {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  color: #ffffff;
+  vertical-align: middle;
+  font-weight: lighter;
+  font-size: medium;
+}
+
+.menu-item {
+  margin-right: 20px;
+  cursor: pointer;
+  position: relative;
+  width: 80px;
+}
+
+.menu-line {
+  height: 2px;
+  background-color: #ff681d;
+  width: 0; /* Initially hide the line */
+  position: absolute;
+  bottom: -18px; /* Adjust this value to lower the line */
+
+  left: 0;
+  transition: width 0.3s ease; /* Add a smooth transition effect */
+}
+
+.menu-item:hover .menu-line {
+  width: 100%; /* Show the line on hover */
+}
+
+
+.supply-button {
+  height: 30px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.supply-button:hover {
+  background-color: gray; /* Change background color on hover */
+}
+
+
+
+
+.header-table{
+  width: 400px;
+}
+
+.header-table thead th {
+  text-align: left;
+  vertical-align: middle; /* Set vertical alignment to center */
+  color: rgb(193, 193, 193);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header-table tbody th {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  vertical-align: middle; /* Set vertical alignment to center */
+  padding-top: 5px;
+  padding-bottom: 15px;
+  
+}
+.content-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.content-table thead th {
+  text-align: left;
+  color: rgb(79, 79, 79);
+  
+  font-weight: 500;
+  border-bottom: 1px solid rgb(234, 234, 234); /* Add a bottom border to create a line between rows */
+}
+
+.content-table tbody th {
+ 
+  font-weight: normal;
+  vertical-align: middle; /* Set vertical alignment to center */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid  rgb(234, 234, 234); /* Add a bottom border to create a line between rows */
+}
+
+.content-table tbody th img {
+  vertical-align: middle; /* Align the image to the middle */
+  border-radius: 50%;
+}
+
+.card {
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example drop shadow, adjust as needed */
+  
+}
+
+.login-button {
+  color: #ff681d;
+  background-color: rgb(33, 33, 33);
+  border-color: #ff681d;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.supply-value {
+  font-size: small;
+  color: grey;
+}
+
+/* Add this style to your stylesheet */
+.disabled-row {
+  opacity: 0.8; /* Adjust the opacity as needed */
+  pointer-events: none; /* Disable pointer events */
+  filter: blur(0.8px); /* Add blur effect */
+}
+
+.toast-message {
+  background: darkblue;
+  color: #fff;
+  font-size: 16px;
+  padding: 30px 20px;
+}
+.Toastify__toast--error {
+  border: 1px solid #EB5757;
+  background: #FAE1E2 !important;
+}
+.Toastify__toast--error::after {
+/* content : url('../assets/images/svg/closeToast.svg');  */
+position: absolute;
+color: #333333;
+font-size: 15px;
+font-weight: 700;
+left:265px;
+padding-top: 14px !important;
+}
+.Toastify__toast--error::before {
+/* content: url("../assets/images/svg/errorToast.svg"); */
+position:relative; 
+z-index:100000;
+left:12px;
+top:6px;
+}
+.Toastify__toast--success {
+border: 1px solid #3A9EA5 !important;
+background: #F0F9FA !important;
+}
+.Toastify__toast--success::before {
+/* content: url("../assets/images/svg/successToast.svg"); */
+position:relative; 
+z-index:100000;
+left:12px;
+top:6px;
+}
+.Toastify__toast--success::after {
+/* content : url('../assets/images/svg/closeToast.svg'); */
+position: absolute;
+color: #333333;
+font-size: 15px;
+font-weight: 700;
+left:265px;
+padding-top: 14px !important;
+}
+.Toastify__toast--warning {
+border: 1px solid #E78326  !important;
+background: #FADFC5 !important;
+}
+.Toastify__toast--warning::before {
+/* content: url("../assets/images/svg/warnToast.svg"); */
+position:relative; 
+z-index:100000;
+left:12px;
+top:6px;
+}  
+.Toastify__toast--warning::after {
+/* content : url('../assets/images/svg/closeToast.svg');  */
+position: absolute;
+color: #E78326;
+font-size: 15px;
+font-weight: 700;
+left:265px;
+padding-top: 14px !important;
+}
+.Toastify__toast-body {
+color: #444C63    ;
+font-size: 16px;
+padding-left: 20px;
+line-height: 20px;
+padding: 0px;
+padding-top: 25px;
+width: 100%;
+font-weight: 400;
+white-space: pre-line;
+} 
+.Toastify__toast > button>  svg {
+  display: none;
+}
+
+.contents {
+  margin-top: -50px;
+}
+
+.contents2{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;  
+  width: 100%;
+}
+
+.contents-card{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+
+}
+
+.App-header-item img{
+  height: 40px;
+}
+
+.beta{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.login-button img{
+  height: 15px;
+}
+
+/* Example media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .contents {
+    margin-top: -50px;
+    display: flex;
+    flex-direction:row;
+    padding: 0px; /* Example adjustment */
+  }
+
+  .contents2{
+    flex-direction: column;
+  }
+
+  .contents-card{
+    width: 100%;
+  }
+
+  .App-header-item img{
+    height: 30px;
+  }
+  .beta{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+
+  .login-button {
+   font-size: 12px;
+   width: auto;
+  }
+
+  .mobile-banner{
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #E78326;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+}

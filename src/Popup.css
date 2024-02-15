@@ -1,0 +1,37 @@
+/* Popup.css */
+
+.popup-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  background: rgba(0, 0, 0, 0.8); /* Translucent gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Adjust the value based on your needs */
+}
+
+.popup-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  overflow-y: auto; /* Enable vertical scrolling for the content */
+}
+
+.popup-loading {
+  text-align: center;
+}
+
+.popup-close-btn {
+  background: #f00;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
